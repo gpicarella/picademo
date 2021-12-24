@@ -1,0 +1,45 @@
+
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://picademo.service-now.com">
+ 	<SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<KeyDescriptor use="signing" >
+			<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:X509Data><ds:X509Certificate>MIIDljCCAn6gAwIBAgIJAOIJ7fUNxEwRMA0GCSqGSIb3DQEBCwUAMHkxCzAJBgNVBAYTAklUMQ4w
+DAYDVQQIEwVJdGFseTENMAsGA1UEBxMEUm9tZTETMBEGA1UEChMKU2VydmljZU5vdzETMBEGA1UE
+CxMKU2VydmljZU5vdzEhMB8GA1UEAxMYcGljYWRlbW8uc2VydmljZS1ub3cuY29tMB4XDTIxMTIy
+MzE2MzI0N1oXDTIyMDMyMzE2MzI0N1oweTELMAkGA1UEBhMCSVQxDjAMBgNVBAgTBUl0YWx5MQ0w
+CwYDVQQHEwRSb21lMRMwEQYDVQQKEwpTZXJ2aWNlTm93MRMwEQYDVQQLEwpTZXJ2aWNlTm93MSEw
+HwYDVQQDExhwaWNhZGVtby5zZXJ2aWNlLW5vdy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCubMHj6B9qMxzGMtBKsQSTwVq74yP8pOR7lyLEfBne2+loAwrLD55+NUMHcH/C8nJn
+1++xymMcYpN2uhMcXAcBELMTSlvzeMm9NkjlTxU3KkUzmgUCDQnPsknXulNhunk5XN8sLy+svswJ
+KkbyyErhT3pyXkDV2sHES46upcoHRzSiSpFmYZW5Wsb0ab/uhTqUGgwArYYac3bEaXKFqVBObDKV
+OrupTa94Fqnh1m+W1cxctieLd4hsvVYV7UFumpMeiwzXep1cCZIu2/fVZm0nujSh7Y8uFA2Qa6yt
+tClVayuhOtKwtmSUtA4FVqUyYcoshJPDtirkODBjcbmjPuMvAgMBAAGjITAfMB0GA1UdDgQWBBTX
+z1r0SmG1fUXu67cAYt4fKCUylzANBgkqhkiG9w0BAQsFAAOCAQEAMhWcLC2p4qHbtyW6grGUQOv6
+vH9GHh25lNCQlzglKj2CtZczkK9t4DycrYQtZXWeDjTF49n3BZncq0xX/WwLtETx9dsgEXEFBisU
+/3iCMQPcGP1s7ZJtS3x6StCdIOFaqRll5TWY8i09cPJBcQV1my33KpI97gahGMNP1TJyqP8vCQtv
+CAHg6iz4Ch6wYNZ0pC6lTCaIwNZnda7vuctEVqlvcCJFtrOmc9QjNAxbN14lnxi5ECPfNqiGAtVZ
+954KXF1rGXp32awQkCaUXkozFpvPt2IQ3JKJk/7WjwzomAc3c0Vvl0Txwwwsz+DWWEBI/BuWFb7G
+p8loYdB5jVpmxA==</ds:X509Certificate></ds:X509Data></ds:KeyInfo>
+		</KeyDescriptor>
+		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://picademo.service-now.com/navpage.do"/>
+		<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:entity</NameIDFormat>
+		<AssertionConsumerService isDefault="true" index="0" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://picademo.service-now.com/navpage.do" />
+		<AssertionConsumerService isDefault="false" index="1" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://picademo.service-now.com/consumer.do" />
+		   <md:AttributeConsumingService index="0">
+            <md:ServiceName xml:lang="it">Set 0</md:ServiceName>
+            <md:RequestedAttribute Name="fiscalNumber"/>
+	</SPSSODescriptor>
+	<md:Organization>
+        <OrganizationName xml:lang="it">Service provider TEST</OrganizationName>
+        <OrganizationDisplayName xml:lang="it">Nome service provider</OrganizationDisplayName>
+        <OrganizationURL xml:lang="it">http://picademo.service-now.com</OrganizationURL>
+    </md:Organization>
+    <md:ContactPerson contactType="other">
+        <md:Extensions>
+            <spid:VATNumber>IT12345678901</spid:VATNumber>
+            <spid:FiscalCode>XYZABCAAMGGJ000W</spid:FiscalCode>
+            <spid:Private/>
+        </md:Extensions>
+        <md:EmailAddress>tech-info@example.org</md:EmailAddress>
+        <md:TelephoneNumber>+39 8472345634785</md:TelephoneNumber>
+    </md:ContactPerson>
+</EntityDescriptor>
